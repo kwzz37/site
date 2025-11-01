@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renault Laguna 2 - Garage</title>
     <link rel="stylesheet" href="rl2.css">
+    <link rel="stylesheet" href="animations.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
@@ -12,7 +13,7 @@
     <header>        
         <nav>
             <ul class="nav-bar">
-                <li class="logo"><a href="home.html"><img src="./images/logo.png"></a></li>
+                <li class="logo"><a href="rl2.html"><img src="./images/logo.png"></a></li>
                 <input type="checkbox" id="check">
                 <span class="menu">
                     <li><a href="home.html">Home</a></li>
@@ -33,17 +34,22 @@
             <div class="shape shape--small"></div>
             <section id="models">
                 <h1>Наш гараж</h1>
+                                    <div class="car-card">
+                        <a href="grandtour.html" style="text-decoration: none; color: inherit;">
+                            <img src="images/rl2_gtr.png" class="car-img" alt="Laguna II Универсал">
+                            <h3>Laguna II Grandtour</h3>
+                            <p>2.0 IDE F5R</p>
+                        </a>
+                    </div>
                 <div class="car-grid">
                     <div class="car-card">
-                        <img src="images/rl_2main.png" class="car-img" alt="Laguna II Седан">
-                        <h3>Laguna II Седан</h3>
-                        <p>2.0 IDE F5R</p>
+                        <a href="sedan.html" style="text-decoration: none; color: inherit;">
+                            <img src="images/rl2_dan.png" class="car-img" alt="Laguna II Седан">
+                            <h3>Laguna II Седан</h3>
+                            <p>2.0 IDE F5R</p>
+                        </a>
                     </div>
-                    <div class="car-card">
-                        <img src="images/rl_2main.png" class="car-img" alt="Laguna II Универсал">
-                        <h3>Laguna II Grandtour</h3>
-                        <p>2.0 IDE F5R</p>
-                    </div>
+
                 </div>
             </section>
         </div>
@@ -52,5 +58,6 @@
     <div class="additional-glow glow-1"></div>
     <div class="additional-glow glow-2"></div>
     <div class="additional-glow glow-3"></div>
+    <script src="animations.js"></script>
 </body>
 </html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт - Услуги</title>
+    <link rel="stylesheet" href="rl2.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        .repair-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        .repair-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+        .price-range {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        .repair-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: var(--accent-color);
+        }
+        .timeline-item {
+            margin: 2rem 0;
+            position: relative;
+        }
+        .timeline-content {
+            width: 45%;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>        
+        <nav>
+            <ul class="nav-bar">
+                <li class="logo"><a href="rl2.html"><img src="./images/logo.png"></a></li>
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="garage.html">Garage</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="repair-section">
+            <div class="shape shape--big"></div>
+            <div class="shape shape--small"></div>
+            <section id="repair">
+                <h1>Ремонтные работы</h1>
+                <p>Профессиональный ремонт Renault Laguna II с гарантией</p>
+
+                <div class="repair-grid">
+                    <div class="repair-card">
+                        <i class="fas fa-cogs fa-2x"></i>
+                        <h3>Ремонт двигателя</h3>
+                        <ul>
+                            <li>Капитальный ремонт</li>
+                            <li>Замена ГРМ</li>
+                            <li>Регулировка клапанов</li>
+                        </ul>
+                        <p class="price-range">От 500 BYN</p>
+                    </div>
+
+                    <div class="repair-card">
+                        <i class="fas fa-car-battery fa-2x"></i>
+                        <h3>Ремонт трансмиссии</h3>
+                        <ul>
+                            <li>Замена сцепления</li>
+                            <li>Ремонт МКПП/АКПП</li>
+                            <li>Замена масла</li>
+                        </ul>
+                        <p class="price-range">От 300 BYN</p>
+                    </div>
+
+                    <div class="repair-card">
+                        <i class="fas fa-car-crash fa-2x"></i>
+                        <h3>Кузовной ремонт</h3>
+                        <ul>
+                            <li>Рихтовка</li>
+                            <li>Покраска</li>
+                            <li>Полировка</li>
+                        </ul>
+                        <p class="price-range">От 200 BYN</p>
+                    </div>
+                </div>
+
+                <h2>Процесс ремонта</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Диагностика</h3>
+                            <p>Полная диагностика автомобиля и выявление неисправностей</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Согласование</h3>
+                            <p>Составление сметы и согласование работ с клиентом</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Ремонт</h3>
+                            <p>Выполнение ремонтных работ квалифицированными специалистами</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Контроль качества</h3>
+                            <p>Проверка качества выполненных работ</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="animations.js"></script>
+</body>
+</html>

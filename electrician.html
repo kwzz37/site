@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электрик - Контакты и резюме</title>
+    <link rel="stylesheet" href="rl2.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        .electrician-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+        }
+        .electrician-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+        }
+        .skill-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin: 5px 0 15px 0;
+            overflow: hidden;
+        }
+        .skill-progress {
+            height: 100%;
+            background: var(--accent-color);
+            border-radius: 5px;
+            transition: width 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>        
+        <nav>
+            <ul class="nav-bar">
+                <li class="logo"><a href="rl2.html"><img src="./images/logo.png"></a></li>
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="garage.html">Garage</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="electrician-section">
+            <div class="shape shape--big"></div>
+            <div class="shape shape--small"></div>
+            <section id="electrician">
+                <h1>Наш специалист по электрике</h1>
+
+                <div class="electrician-card">
+                    <img src="https://via.placeholder.com/200" alt="Электрик" class="electrician-photo">
+                    <div class="electrician-info">
+                        <h2>Войтов Максим</h2>
+                        <p><i class="fas fa-graduation-cap"></i> Опыт работы: 15 лет</p>
+                        <p><i class="fas fa-phone"></i> +375 44 555-42-33</p>
+                        <p><i class="fas fa-envelope"></i> voitov543007@gmail.com</p>
+                        
+                        <h3>Навыки:</h3>
+                        <div class="skills">
+                            <p>Диагностика электросистем</p>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+
+                            <p>Ремонт электропроводки</p>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+
+                            <p>Работа с CAN-шиной</p>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <h3>Специализация:</h3>
+                        <ul>
+                            <li>Диагностика и ремонт электронных систем Renault</li>
+                            <li>Установка дополнительного оборудования</li>
+                            <li>Ремонт стартеров и генераторов</li>
+                            <li>Программирование ключей и иммобилайзеров</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Записаться на консультацию</h2>
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="Телефон" required>
+                    <textarea placeholder="Опишите проблему" required></textarea>
+                    <button type="submit">Отправить заявку</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="animations.js"></script>
+</body>
+</html>

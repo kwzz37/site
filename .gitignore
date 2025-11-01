@@ -1,0 +1,15 @@
+# Visual Studio Code
+.vscode/
+.vs/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*~
+
+# Node modules if you add them later
+node_modules/

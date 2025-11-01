@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диагностика - Инструкция</title>
+    <link rel="stylesheet" href="rl2.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        .diagnostic-step {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        .diagnostic-step:hover {
+            transform: translateX(10px);
+            border-color: var(--accent-color);
+        }
+        .step-number {
+            background: var(--accent-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>        
+        <nav>
+            <ul class="nav-bar">
+                <li class="logo"><a href="rl2.html"><img src="./images/logo.png"></a></li>
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="garage.html">Garage</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="diagnostic-section">
+            <div class="shape shape--big"></div>
+            <div class="shape shape--small"></div>
+            <section id="diagnostic">
+                <h1>Инструкция по диагностике</h1>
+                <p>Пошаговое руководство по использованию диагностического оборудования для Renault Laguna II</p>
+
+                <div class="diagnostic-steps">
+                    <div class="diagnostic-step">
+                        <span class="step-number">1</span>
+                        <h3>Подготовка</h3>
+                        <p>Убедитесь, что зажигание выключено. Найдите диагностический разъем OBD2 (обычно находится под рулевой колонкой).</p>
+                    </div>
+
+                    <div class="diagnostic-step">
+                        <span class="step-number">2</span>
+                        <h3>Подключение сканера</h3>
+                        <p>Подключите диагностический сканер к разъему OBD2. Рекомендуемые модели: Clip, Can Clip, Launch X431.</p>
+                    </div>
+
+                    <div class="diagnostic-step">
+                        <span class="step-number">3</span>
+                        <h3>Включение зажигания</h3>
+                        <p>Включите зажигание, но не заводите двигатель. Дождитесь инициализации сканера.</p>
+                    </div>
+
+                    <div class="diagnostic-step">
+                        <span class="step-number">4</span>
+                        <h3>Выбор автомобиля</h3>
+                        <p>В меню сканера выберите: Renault → Laguna II → Год выпуска → Тип двигателя</p>
+                    </div>
+
+                    <div class="diagnostic-step">
+                        <span class="step-number">5</span>
+                        <h3>Считывание ошибок</h3>
+                        <p>Выберите "Считать ошибки". Сканер покажет активные и сохраненные ошибки с их кодами.</p>
+                    </div>
+
+                    <div class="diagnostic-step">
+                        <span class="step-number">6</span>
+                        <h3>Расшифровка</h3>
+                        <p>Используйте базу данных кодов ошибок или обратитесь к специалисту для интерпретации результатов.</p>
+                    </div>
+                </div>
+
+                <div class="diagnostic-tips">
+                    <h2>Полезные советы</h2>
+                    <ul>
+                        <li>Всегда записывайте коды ошибок перед их удалением</li>
+                        <li>После ремонта обязательно удалите ошибки</li>
+                        <li>Некоторые ошибки могут появиться снова после удаления, если проблема не устранена</li>
+                        <li>При серьезных ошибках обратитесь к специалисту</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="animations.js"></script>
+</body>
+</html>

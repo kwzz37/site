@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renault Laguna II Grandtour</title>
+    <link rel="stylesheet" href="rl2.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        .car-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .spec-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .spec-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+        }
+
+        .cargo-visualization {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .cargo-states {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .cargo-state {
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .cargo-state:hover {
+            transform: scale(1.05);
+            border-color: var(--accent-color);
+        }
+
+        .cargo-volume {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin: 1rem 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>        
+        <nav>
+            <ul class="nav-bar">
+                <li class="logo"><a href="rl2.html"><img src="./images/logo.png"></a></li>
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="garage.html">Garage</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="grandtour-section">
+            <div class="shape shape--big"></div>
+            <div class="shape shape--small"></div>
+            
+            <section id="grandtour">
+                <h1>Renault Laguna II Grandtour</h1>
+                <p>Универсальный семейный автомобиль с впечатляющим пространством и комфортом</p>
+
+                <div class="car-specs">
+                    <div class="spec-card">
+                        <h3>Технические характеристики</h3>
+                        <ul>
+                            <li>Двигатель: 2.0 IDE F5R</li>
+                            <li>Мощность: 140 л.с.</li>
+                            <li>Крутящий момент: 200 Нм</li>
+                            <li>Разгон до 100 км/ч: 9.5 сек</li>
+                            <li>Максимальная скорость: 195 км/ч</li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-card">
+                        <h3>Размеры и вес</h3>
+                        <ul>
+                            <li>Длина: 4708 мм</li>
+                            <li>Ширина: 1772 мм</li>
+                            <li>Высота: 1445 мм</li>
+                            <li>Колесная база: 2745 мм</li>
+                            <li>Снаряженная масса: 1395 кг</li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-card">
+                        <h3>Практичность</h3>
+                        <ul>
+                            <li>Объем багажника: 475-1515 л</li>
+                            <li>Топливный бак: 70 л</li>
+                            <li>Расход топлива (город): 11.5 л/100км</li>
+                            <li>Расход топлива (трасса): 6.8 л/100км</li>
+                            <li>Расход топлива (смешанный): 8.5 л/100км</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cargo-visualization">
+                    <h2>Трансформация багажного отсека</h2>
+                    <div class="cargo-states">
+                        <div class="cargo-state">
+                            <h3>Стандартное положение</h3>
+                            <div class="cargo-volume">475 л</div>
+                            <p>Все сиденья подняты</p>
+                        </div>
+                        <div class="cargo-state">
+                            <h3>Сложенный ряд</h3>
+                            <div class="cargo-volume">1515 л</div>
+                            <p>Задние сиденья сложены</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Особенности универсала</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <h3>Багажный отсек</h3>
+                        <p>Ровный пол при сложенных сиденьях, дополнительные ниши для мелочей</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck-loading"></i>
+                        </div>
+                        <h3>Погрузка</h3>
+                        <p>Низкая погрузочная высота, широкий проем багажника</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-grip-lines"></i>
+                        </div>
+                        <h3>Рейлинги</h3>
+                        <p>Интегрированные рейлинги для багажника на крыше</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                        <h3>Аэродинамика</h3>
+                        <p>Специальная настройка подвески для универсала</p>
+                    </div>
+                </div>
+
+                <div class="spec-card">
+                    <h2>Дополнительные опции</h2>
+                    <ul>
+                        <li>Шторка багажного отделения</li>
+                        <li>Сетка для фиксации груза</li>
+                        <li>Розетка 12В в багажнике</li>
+                        <li>Складывающиеся задние сиденья 60:40</li>
+                        <li>Дополнительное освещение багажника</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="additional-glow glow-1"></div>
+    <div class="additional-glow glow-2"></div>
+    <div class="additional-glow glow-3"></div>
+    <script src="animations.js"></script>
+</body>
+</html>

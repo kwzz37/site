@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renault Laguna 2 - Services</title>
     <link rel="stylesheet" href="rl2.css">
+    <link rel="stylesheet" href="animations.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
@@ -12,7 +13,7 @@
     <header>        
         <nav>
             <ul class="nav-bar">
-                <li class="logo"><a href="home.html"><img src="./images/logo.png"></a></li>
+                <li class="logo"><a href="rl2.html"><img src="./images/logo.png"></a></li>
                 <input type="checkbox" id="check">
                 <span class="menu">
                     <li><a href="home.html">Home</a></li>
@@ -35,24 +36,32 @@
                 <h1>Наши услуги</h1>
                 <div class="services-grid">
                     <div class="service-card">
-                        <i class="fas fa-wrench"></i>
-                        <h3>Техническое обслуживание</h3>
-                        <p>Регулярное ТО</p>
+                        <a href="maintenance.html" style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-wrench"></i>
+                            <h3>Техническое обслуживание</h3>
+                            <p>Найти ближайшую СТО</p>
+                        </a>
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-cog"></i>
-                        <h3>Ремонт</h3>
-                        <p>Качественный ремонт</p>
+                        <a href="repair.html" style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-cog"></i>
+                            <h3>Ремонт</h3>
+                            <p>Узнать о видах ремонта</p>
+                        </a>
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-diagnoses"></i>
-                        <h3>Диагностика</h3>
-                        <p>Компьютерная диагностика</p>
+                        <a href="diagnostic.html" style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-diagnoses"></i>
+                            <h3>Диагностика</h3>
+                            <p>Инструкция по диагностике</p>
+                        </a>
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-car-battery"></i>
-                        <h3>Электрика</h3>
-                        <p>Ремонт электрики</p>
+                        <a href="electrician.html" style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-car-battery"></i>
+                            <h3>Электрика</h3>
+                            <p>Контакты специалиста</p>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -62,5 +71,6 @@
     <div class="additional-glow glow-1"></div>
     <div class="additional-glow glow-2"></div>
     <div class="additional-glow glow-3"></div>
+    <script src="animations.js"></script>
 </body>
 </html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Техническое обслуживание - СТО</title>
+    <link rel="stylesheet" href="rl2.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .station-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body>
+    <header>        
+        <nav>
+            <ul class="nav-bar">
+                <li class="logo"><a href="rl2.html"><img src="./images/logo.png"></a></li>
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="garage.html">Garage</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="maintenance-section">
+            <div class="shape shape--big"></div>
+            <div class="shape shape--small"></div>
+            <section id="maintenance">
+                <h1>Станции технического обслуживания</h1>
+                <p>Найдите ближайшую СТО, специализирующуюся на Renault Laguna II</p>
+                
+                <div id="map"></div>
+
+                <div class="stations-list">
+                    <h2>Список СТО</h2>
+                    <div class="station-card">
+                        <h3>СТО "АвтоМастер"</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Минск, ул. Притыцкого, 62</p>
+                        <p><i class="fas fa-phone"></i> +375 29 123-45-67</p>
+                    </div>
+                    <div class="station-card">
+                        <h3>СТО "Рено-Сервис"</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Брест, ул. Московская, 275</p>
+                        <p><i class="fas fa-phone"></i> +375 29 234-56-78</p>
+                    </div>
+                    <div class="station-card">
+                        <h3>СТО "ФранцАвто"</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Гомель, ул. Советская, 97</p>
+                        <p><i class="fas fa-phone"></i> +375 29 345-67-89</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // Инициализация карты
+        var map = L.map('map').setView([53.9, 27.5667], 6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Добавление маркеров СТО
+        var stations = [
+            {
+                name: "СТО 'АвтоМастер'",
+                lat: 53.9045,
+                lng: 27.5615,
+                address: "Минск, ул. Притыцкого, 62",
+                phone: "+375 29 123-45-67"
+            },
+            {
+                name: "СТО 'Рено-Сервис'",
+                lat: 52.0975,
+                lng: 23.6877,
+                address: "Брест, ул. Московская, 275",
+                phone: "+375 29 234-56-78"
+            },
+            {
+                name: "СТО 'ФранцАвто'",
+                lat: 52.4345,
+                lng: 30.9754,
+                address: "Гомель, ул. Советская, 97",
+                phone: "+375 29 345-67-89"
+            }
+        ];
+
+        stations.forEach(function(station) {
+            L.marker([station.lat, station.lng])
+             .bindPopup(`<b>${station.name}</b><br>${station.address}<br>${station.phone}`)
+             .addTo(map);
+        });
+    </script>
+    <script src="animations.js"></script>
+</body>
+</html>
