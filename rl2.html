@@ -5,6 +5,7 @@
     <title>Renault Laguna 2 forum</title>
     <link rel="stylesheet" href="rl2.css">
     <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="auth.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"> 
 </head>
 <body>
@@ -19,6 +20,27 @@
                                  <li><a href="services.html">Services</a></li>
                                  <li><a href="about.html">About</a></li>
                                  <li><a href="contact.html">Contact</a></li>
+                                 <li class="auth-buttons">
+                                    <a href="#" class="auth-toggle">
+                                        Личный кабинет <i class="fas fa-user-circle"></i>
+                                    </a>
+                                    <div class="auth-dropdown">
+                                        <a href="login.html" class="auth-option login">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            <div>
+                                                <span>Войти</span>
+                                                <div class="auth-description">Уже есть аккаунт? Добро пожаловать!</div>
+                                            </div>
+                                        </a>
+                                        <a href="register.html" class="auth-option register">
+                                            <i class="fas fa-user-plus"></i>
+                                            <div>
+                                                <span>Регистрация</span>
+                                                <div class="auth-description">Создайте аккаунт и получите доступ ко всем функциям</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                 </li>
                 <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
             </span>
             <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>

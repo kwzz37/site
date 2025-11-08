@@ -6,6 +6,8 @@
     --secondary-color: #2c3e50;
     --transition: all 0.3s ease;
     --glow-spread: 20px;
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
 }
 
 @keyframes headlightBlink {

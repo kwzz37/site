@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать - Renault Laguna 2</title>
+    <link rel="stylesheet" href="rl2.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header>        
+        <nav>
+            <ul class="nav-bar">
+                <li class="logo"><a href="rl2.html"><img src="./images/logo.png"></a></li>
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="garage.html">Garage</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="user-profile">
+                        <span id="username"></span>
+                        <button onclick="logout()" class="logout-btn">Выйти</button>
+                    </li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="welcome-section">
+            <div class="shape shape--big"></div>
+            <div class="shape shape--small"></div>
+            <section id="welcome">
+                <h1>Добро пожаловать в мир Renault Laguna II!</h1>
+                <div class="welcome-content">
+                    <div class="welcome-card">
+                        <i class="fas fa-car"></i>
+                        <h2>Ваш профиль активирован</h2>
+                        <p>Теперь вам доступны все функции сайта:</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Просмотр технической документации</li>
+                            <li><i class="fas fa-check"></i> Общение с другими владельцами</li>
+                            <li><i class="fas fa-check"></i> Доступ к базе знаний</li>
+                            <li><i class="fas fa-check"></i> Персональные рекомендации</li>
+                        </ul>
+                        <a href="garage.html" class="welcome-btn">Начать знакомство</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="additional-glow glow-1"></div>
+    <div class="additional-glow glow-2"></div>
+    <div class="additional-glow glow-3"></div>
+    <script src="animations.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

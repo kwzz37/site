@@ -6,6 +6,7 @@
     <title>Renault Laguna 2 - Contact</title>
     <link rel="stylesheet" href="rl2.css">
     <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="auth.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
@@ -21,6 +22,27 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li class="auth-buttons">
+                        <a href="#" class="auth-toggle">
+                            Личный кабинет <i class="fas fa-user-circle"></i>
+                        </a>
+                        <div class="auth-dropdown">
+                            <a href="login.html" class="auth-option login">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <div>
+                                    <span>Войти</span>
+                                    <div class="auth-description">Уже есть аккаунт? Добро пожаловать!</div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="auth-option register">
+                                <i class="fas fa-user-plus"></i>
+                                <div>
+                                    <span>Регистрация</span>
+                                    <div class="auth-description">Создайте аккаунт и получите доступ ко всем функциям</div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
                     <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
                 </span>
                 <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
@@ -52,10 +74,12 @@
                             <p>voitov543007gmail.com</p>
                         </div>
                     </div>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Ваше имя" required>
-                        <input type="email" placeholder="Email" required>
-                        <textarea placeholder="Ваше сообщение" required></textarea>
+                    <form class="contact-form" action="https://formspree.io/f/xzzypdyo" method="POST">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                        <input type="hidden" name="_subject" value="Новое сообщение с сайта Renault Laguna II">
+                        <input type="hidden" name="_next" value="https://kwzz37.github.io/site/thank-you.html">
                         <button type="submit">Отправить</button>
                     </form>
                 </div>
@@ -67,5 +91,6 @@
     <div class="additional-glow glow-2"></div>
     <div class="additional-glow glow-3"></div>
     <script src="animations.js"></script>
+    <script src="auth.js"></script>
 </body>
 </html>
